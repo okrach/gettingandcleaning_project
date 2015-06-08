@@ -7,6 +7,7 @@ The script has been developed and tested using R version 3.2.0 (2015-04-16) on W
 
 The script takes no argument. It assumes the raw data has been already unzipped into the current working directory.
 It utilizes package dplyr in addition to standard R distribution.
+
 Steps of the transformation in the script are:<br>
 1. Read descriptive names of the measured variables [feat]<br>
 2. Construct format/mask for reading mean & standard deviation variables from master raw data files [frm]<br>
