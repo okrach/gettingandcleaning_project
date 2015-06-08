@@ -1,7 +1,7 @@
 # gettingandcleaning_project
 Material produced to fulfill the formal requirements of the Coursera Getting and Cleaning Data course.
 
-The raw data http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones has been transformed using the script run_analysis.R included in this repo producing the output tidy dataset https://s3.amazonaws.com/coursera-uploads/user-c50198bb02cf09bc80bb5720/973502/asst-3/8ed8efb00dbd11e593d02315adc1869f.txt 
+The raw data http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones has been transformed using the script run_analysis.R included in this repo producing the output tidy dataset https://s3.amazonaws.com/coursera-uploads/user-c50198bb02cf09bc80bb5720/973502/asst-3/6f2769f00dd411e59500e3c7e0ef34d3.txt
 
 The script has been developed and tested using R version 3.2.0 (2015-04-16) on Windows 7 Enterprise SP1 32-bit.
 
