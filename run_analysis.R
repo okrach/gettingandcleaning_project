@@ -9,4 +9,4 @@ subject_all <- rbind(read.fortran(file="UCI HAR Dataset/train/subject_train.txt"
 x_all$subject <- sapply(subject_all$V1,function(i){paste0("subject_",i)})
 library(dplyr)
 x_summary <- summarise_each(group_by(x_all,activity,subject),funs(mean))
-write.table(x_summary,file = "AverageByActivityAndSubject.txt")
+write.table(x_summary, row.names = FALSE, file = "AverageByActivityAndSubject.txt")
