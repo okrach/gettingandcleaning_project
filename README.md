@@ -1,5 +1,5 @@
 # gettingandcleaning_project
-Material produced to fulfill the formal requirements of the Coursera Getting and Cleaning Data course
+Material produced to fulfill the formal requirements of the Coursera Getting and Cleaning Data course.
 
 The raw data http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones has been transformed using the script run_analysis.R included in this repo producing the output tidy dataset https://s3.amazonaws.com/coursera-uploads/user-c50198bb02cf09bc80bb5720/973502/asst-3/8ed8efb00dbd11e593d02315adc1869f.txt 
 
@@ -20,7 +20,7 @@ Steps of the transformation in the script are:<br>
 9. Label masted data rows with semi-descriptive subject names [x_all$subject]<br>
 10. Load package [dplyr]<br>
 11. Calculate averages of each of the measured variables per subject/activity combination [x_summary]<br>
-12. Create output (tidy data) file in the current working directory [AverageByActivityAndSubject.txt]<br>
+12. Create the output (tidy data) file in the current working directory [AverageByActivityAndSubject.txt]<br>
 
 
 
