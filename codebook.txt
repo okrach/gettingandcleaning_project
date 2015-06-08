@@ -1,4 +1,83 @@
-<H1>Study design
-Source
-<H1>Code book
-Variables
+1. Study design
+The project is meant to select, clean and aggregate raw accelerometer and gyroscope data provided as input yielding output data conforming to tidyness standards defined in https://github.com/jtleek/datasharing
+
+The details of the output data set are provided in the next section of this document.
+
+2. Code book
+The output data set consists of 180 rows (30 subjects times 6 activities) each with 68 variables: 2 categorical (activity, subject) and 66 continuous (a pair of mean & standard deviation for 33 measured physical quantities).
+
+The categorical variables are simple 1:1 translations from raw (number-encoded) values to descriptive values either using translation table provided in the raw data (variable activity, table activity_labels.txt) or embedding raw code into a preformatted string (variable subject, pattern "subject_%d"). 
+
+The continuous variables are simple arithmetic averages of all respective raw measurements pertaining given activity and subject combination. For this reason the units for the output (tidy) variables are the same as for the respective input (raw) variables: acceleration (variables *Acc*) unit is the standard Earth gravity g, angular velocity (variables *Gyro*) unit is radian per second. The actual averaging is performed using summarise_each from dplyr package. 
+
+Apart from non-alphanumeric character removal the names of the output variables are the same as provided in the table "features.txt" i.e. no indication of the aggregation (averaging) has been included in the names of the variables assuming the name of the output file itself ("AverageByActivityAndSubject.txt") is sufficient for that purpose.
+
+The full list of variable names in the output data frame is the following:<br>
+activity<br>
+subject<br>
+tBodyAcc_mean_X<br>
+tBodyAcc_mean_Y<br>
+tBodyAcc_mean_Z<br>
+tBodyAcc_std_X<br>
+tBodyAcc_std_Y<br>
+tBodyAcc_std_Z<br>
+tGravityAcc_mean_X<br>
+tGravityAcc_mean_Y<br>
+tGravityAcc_mean_Z<br>
+tGravityAcc_std_X<br>
+tGravityAcc_std_Y<br>
+tGravityAcc_std_Z<br>
+tBodyAccJerk_mean_X<br>
+tBodyAccJerk_mean_Y<br>
+tBodyAccJerk_mean_Z<br>
+tBodyAccJerk_std_X<br>
+tBodyAccJerk_std_Y<br>
+tBodyAccJerk_std_Z<br>
+tBodyGyro_mean_X<br>
+tBodyGyro_mean_Y<br>
+tBodyGyro_mean_Z<br>
+tBodyGyro_std_X<br>
+tBodyGyro_std_Y<br>
+tBodyGyro_std_Z<br>
+tBodyGyroJerk_mean_X<br>
+tBodyGyroJerk_mean_Y<br>
+tBodyGyroJerk_mean_Z<br>
+tBodyGyroJerk_std_X<br>
+tBodyGyroJerk_std_Y<br>
+tBodyGyroJerk_std_Z<br>
+tBodyAccMag_mean<br>
+tBodyAccMag_std<br>
+tGravityAccMag_mean<br>
+tGravityAccMag_std<br>
+tBodyAccJerkMag_mean<br>
+tBodyAccJerkMag_std<br>
+tBodyGyroMag_mean<br>
+tBodyGyroMag_std<br>
+tBodyGyroJerkMag_mean<br>
+tBodyGyroJerkMag_std<br>
+fBodyAcc_mean_X<br>
+fBodyAcc_mean_Y<br>
+fBodyAcc_mean_Z<br>
+fBodyAcc_std_X<br>
+fBodyAcc_std_Y<br>
+fBodyAcc_std_Z<br>
+fBodyAccJerk_mean_X<br>
+fBodyAccJerk_mean_Y<br>
+fBodyAccJerk_mean_Z<br>
+fBodyAccJerk_std_X<br>
+fBodyAccJerk_std_Y<br>
+fBodyAccJerk_std_Z<br>
+fBodyGyro_mean_X<br>
+fBodyGyro_mean_Y<br>
+fBodyGyro_mean_Z<br>
+fBodyGyro_std_X<br>
+fBodyGyro_std_Y<br>
+fBodyGyro_std_Z<br>
+fBodyAccMag_mean<br>
+fBodyAccMag_std<br>
+fBodyBodyAccJerkMag_mean<br>
+fBodyBodyAccJerkMag_std<br>
+fBodyBodyGyroMag_mean<br>
+fBodyBodyGyroMag_std<br>
+fBodyBodyGyroJerkMag_mean<br>
+fBodyBodyGyroJerkMag_std<br>
