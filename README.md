@@ -1,7 +1,7 @@
 # gettingandcleaning_project
 Material produced to fulfill the formal requirements of the Coursera Getting and Cleaning Data course.
 
-The raw data http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones has been transformed using the script run_analysis.R included in this repo producing the output tidy dataset https://s3.amazonaws.com/coursera-uploads/user-c50198bb02cf09bc80bb5720/973502/asst-3/6f2769f00dd411e59500e3c7e0ef34d3.txt
+The raw data http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones (accessed on 05-JUN-2015) has been transformed using the script run_analysis.R included in this repo producing the output (tidy) dataset https://s3.amazonaws.com/coursera-uploads/user-c50198bb02cf09bc80bb5720/973502/asst-3/6f2769f00dd411e59500e3c7e0ef34d3.txt
 
 The script has been developed and tested using R version 3.2.0 (2015-04-16) on Windows 7 Enterprise SP1 32-bit.
 
@@ -11,7 +11,7 @@ It utilizes package dplyr in addition to standard R distribution.
 Steps of the transformation in the script are:<br>
 1. Read descriptive names of the measured variables [feat]<br>
 2. Construct format/mask for reading mean & standard deviation variables from master raw data files [frm]<br>
-3. Read both master data files into a single data frame [x_all]<br>
+3. Read both master data files (train & test subsamples) into a single data frame [x_all]<br>
 4. Clean and assign descriptive names of the variables [names(x_all)]<br>
 5. Read activity code for all measurements [y_all]<br>
 6. Read descriptive names of activities [act]<br>
